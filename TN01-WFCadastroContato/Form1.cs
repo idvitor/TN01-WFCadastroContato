@@ -40,8 +40,13 @@ namespace TN01_WFCadastroContato
                 MessageBox.Show("Selecione um tipo de Telefone!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-                MessageBox.Show($"O contato salvo: \nNome: {nome} {sobrenome} \nTelefone: {telefone}\nEmail: {email}\nTipo: {tipoTelefone}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"O contato salvo: \nNome: {nome} {sobrenome} \nTelefone: {telefone}\nEmail: {email}\nTipo: {tipoTelefone}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

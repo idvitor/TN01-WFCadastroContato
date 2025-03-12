@@ -178,6 +178,7 @@
             btnVoltar.TabIndex = 15;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // label2
             // 
