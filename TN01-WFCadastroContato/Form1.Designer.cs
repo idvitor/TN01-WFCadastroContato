@@ -43,8 +43,8 @@
             label1 = new Label();
             btnSalvar = new Button();
             btnVoltar = new Button();
-            label2 = new Label();
-            label3 = new Label();
+            lblLinha1 = new Label();
+            lblLinha2 = new Label();
             gbxTelefone = new GroupBox();
             gbxTelefone.SuspendLayout();
             SuspendLayout();
@@ -180,21 +180,21 @@
             btnVoltar.UseVisualStyleBackColor = true;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // label2
+            // lblLinha1
             // 
-            label2.BorderStyle = BorderStyle.Fixed3D;
-            label2.Location = new Point(1, 92);
-            label2.Name = "label2";
-            label2.Size = new Size(555, 14);
-            label2.TabIndex = 16;
+            lblLinha1.BorderStyle = BorderStyle.Fixed3D;
+            lblLinha1.Location = new Point(1, 92);
+            lblLinha1.Name = "lblLinha1";
+            lblLinha1.Size = new Size(555, 14);
+            lblLinha1.TabIndex = 16;
             // 
-            // label3
+            // lblLinha2
             // 
-            label3.BorderStyle = BorderStyle.Fixed3D;
-            label3.Location = new Point(1, 214);
-            label3.Name = "label3";
-            label3.Size = new Size(555, 13);
-            label3.TabIndex = 17;
+            lblLinha2.BorderStyle = BorderStyle.Fixed3D;
+            lblLinha2.Location = new Point(1, 214);
+            lblLinha2.Name = "lblLinha2";
+            lblLinha2.Size = new Size(555, 13);
+            lblLinha2.TabIndex = 17;
             // 
             // gbxTelefone
             // 
@@ -214,8 +214,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 337);
             Controls.Add(gbxTelefone);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lblLinha2);
+            Controls.Add(lblLinha1);
             Controls.Add(btnVoltar);
             Controls.Add(btnSalvar);
             Controls.Add(label1);
@@ -227,7 +227,11 @@
             Controls.Add(lblSobrenome);
             Controls.Add(txtNome);
             Controls.Add(lblNome);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastrar Contato";
             gbxTelefone.ResumeLayout(false);
             gbxTelefone.PerformLayout();
@@ -251,8 +255,8 @@
         private Label label1;
         private Button btnSalvar;
         private Button btnVoltar;
-        private Label label2;
-        private Label label3;
+        private Label lblLinha1;
+        private Label lblLinha2;
         private GroupBox gbxTelefone;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace TN01_WFCadastroContato
+﻿namespace WFUsandoListagem
 {
-    partial class FormMenuPrincipal
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             menuStrip1 = new MenuStrip();
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
-            sobreToolStripMenuItem = new ToolStripMenuItem();
+            listarToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            picMenu = new PictureBox();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, sobreToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, listarToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.RenderMode = ToolStripRenderMode.System;
-            menuStrip1.Size = new Size(487, 24);
+            menuStrip1.Size = new Size(441, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -55,11 +54,12 @@
             cadastrarToolStripMenuItem.Text = "Cadastrar";
             cadastrarToolStripMenuItem.Click += cadastrarToolStripMenuItem_Click;
             // 
-            // sobreToolStripMenuItem
+            // listarToolStripMenuItem
             // 
-            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(49, 20);
-            sobreToolStripMenuItem.Text = "Sobre";
+            listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            listarToolStripMenuItem.Size = new Size(47, 20);
+            listarToolStripMenuItem.Text = "Listar";
+            listarToolStripMenuItem.Click += listarToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -68,34 +68,33 @@
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // picMenu
+            // pictureBox1
             // 
-            picMenu.Dock = DockStyle.Fill;
-            picMenu.Image = (Image)resources.GetObject("picMenu.Image");
-            picMenu.Location = new Point(0, 24);
-            picMenu.Name = "picMenu";
-            picMenu.Size = new Size(487, 313);
-            picMenu.SizeMode = PictureBoxSizeMode.StretchImage;
-            picMenu.TabIndex = 1;
-            picMenu.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 27);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(441, 269);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
-            // FormMenuPrincipal
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(487, 337);
-            Controls.Add(picMenu);
+            ClientSize = new Size(441, 308);
+            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "FormMenuPrincipal";
+            Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menu Principal";
+            Text = "FormMain";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,8 +103,8 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastrarToolStripMenuItem;
-        private ToolStripMenuItem sobreToolStripMenuItem;
+        private ToolStripMenuItem listarToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private PictureBox picMenu;
+        private PictureBox pictureBox1;
     }
 }

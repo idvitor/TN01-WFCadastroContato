@@ -1,3 +1,5 @@
+using System.Security.Cryptography.Xml;
+
 namespace TN01_WFCadastroContato
 {
     public partial class Form1 : Form
@@ -40,6 +42,7 @@ namespace TN01_WFCadastroContato
                 MessageBox.Show("Selecione um tipo de Telefone!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             MessageBox.Show($"O contato salvo: \nNome: {nome} {sobrenome} \nTelefone: {telefone}\nEmail: {email}\nTipo: {tipoTelefone}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

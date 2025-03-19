@@ -22,5 +22,10 @@ namespace TN01_WFCadastroContato
             Form1 form = new Form1();
             form.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
