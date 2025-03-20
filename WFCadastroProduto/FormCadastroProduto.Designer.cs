@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroProduto));
             btnSalvar = new Button();
             lblCodigo = new Label();
             lblCategoria = new Label();
@@ -46,18 +47,22 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(303, 290);
+            btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+            btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSalvar.Location = new Point(106, 333);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(109, 42);
+            btnSalvar.Size = new Size(79, 42);
             btnSalvar.TabIndex = 7;
             btnSalvar.Text = "Salvar";
+            btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+            btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(36, 31);
+            lblCodigo.Location = new Point(12, 31);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(46, 15);
             lblCodigo.TabIndex = 1;
@@ -66,7 +71,7 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(261, 31);
+            lblCategoria.Location = new Point(152, 31);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(58, 15);
             lblCategoria.TabIndex = 2;
@@ -75,7 +80,7 @@
             // lblNomeProduto
             // 
             lblNomeProduto.AutoSize = true;
-            lblNomeProduto.Location = new Point(36, 87);
+            lblNomeProduto.Location = new Point(12, 97);
             lblNomeProduto.Name = "lblNomeProduto";
             lblNomeProduto.Size = new Size(103, 15);
             lblNomeProduto.TabIndex = 3;
@@ -84,7 +89,7 @@
             // lblPreco
             // 
             lblPreco.AutoSize = true;
-            lblPreco.Location = new Point(36, 152);
+            lblPreco.Location = new Point(12, 152);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(37, 15);
             lblPreco.TabIndex = 4;
@@ -93,7 +98,7 @@
             // lblDataVencimento
             // 
             lblDataVencimento.AutoSize = true;
-            lblDataVencimento.Location = new Point(210, 152);
+            lblDataVencimento.Location = new Point(152, 152);
             lblDataVencimento.Name = "lblDataVencimento";
             lblDataVencimento.Size = new Size(113, 15);
             lblDataVencimento.TabIndex = 5;
@@ -102,7 +107,7 @@
             // lblObservacao
             // 
             lblObservacao.AutoSize = true;
-            lblObservacao.Location = new Point(36, 216);
+            lblObservacao.Location = new Point(12, 216);
             lblObservacao.Name = "lblObservacao";
             lblObservacao.Size = new Size(69, 15);
             lblObservacao.TabIndex = 6;
@@ -110,32 +115,34 @@
             // 
             // rtbObservacao
             // 
-            rtbObservacao.Location = new Point(36, 234);
+            rtbObservacao.BackColor = Color.Lavender;
+            rtbObservacao.Location = new Point(12, 234);
             rtbObservacao.Name = "rtbObservacao";
-            rtbObservacao.Size = new Size(208, 98);
+            rtbObservacao.Size = new Size(263, 83);
             rtbObservacao.TabIndex = 6;
             rtbObservacao.Text = "";
             // 
             // txtCodigo
             // 
             txtCodigo.ImeMode = ImeMode.NoControl;
-            txtCodigo.Location = new Point(36, 49);
+            txtCodigo.Location = new Point(12, 49);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(103, 23);
             txtCodigo.TabIndex = 1;
             // 
             // txtNomeProduto
             // 
-            txtNomeProduto.Location = new Point(36, 105);
+            txtNomeProduto.Location = new Point(12, 115);
             txtNomeProduto.Name = "txtNomeProduto";
-            txtNomeProduto.Size = new Size(404, 23);
+            txtNomeProduto.Size = new Size(263, 23);
             txtNomeProduto.TabIndex = 3;
             // 
             // dtpVencimento
             // 
-            dtpVencimento.Location = new Point(210, 170);
+            dtpVencimento.Format = DateTimePickerFormat.Short;
+            dtpVencimento.Location = new Point(152, 174);
             dtpVencimento.Name = "dtpVencimento";
-            dtpVencimento.Size = new Size(230, 23);
+            dtpVencimento.Size = new Size(123, 23);
             dtpVencimento.TabIndex = 5;
             // 
             // cbxCategoria
@@ -144,15 +151,17 @@
             cbxCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxCategoria.FormattingEnabled = true;
             cbxCategoria.Items.AddRange(new object[] { "Alimentos Basicos", "Bebidas", "Doces", "Higiene", "Hortifruti" });
-            cbxCategoria.Location = new Point(261, 49);
+            cbxCategoria.Location = new Point(152, 49);
             cbxCategoria.Name = "cbxCategoria";
-            cbxCategoria.Size = new Size(151, 23);
+            cbxCategoria.Size = new Size(123, 23);
             cbxCategoria.TabIndex = 2;
             // 
             // nudPreco
             // 
             nudPreco.DecimalPlaces = 2;
-            nudPreco.Location = new Point(36, 174);
+            nudPreco.Increment = new decimal(new int[] { 50, 0, 0, 0 });
+            nudPreco.Location = new Point(12, 174);
+            nudPreco.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
             nudPreco.Name = "nudPreco";
             nudPreco.Size = new Size(103, 23);
             nudPreco.TabIndex = 4;
@@ -161,7 +170,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(466, 344);
+            ClientSize = new Size(291, 387);
             Controls.Add(nudPreco);
             Controls.Add(cbxCategoria);
             Controls.Add(dtpVencimento);

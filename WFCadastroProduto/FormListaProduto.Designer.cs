@@ -34,18 +34,19 @@
             // 
             // dgvListaProduto
             // 
+            dgvListaProduto.BackgroundColor = SystemColors.ScrollBar;
             dgvListaProduto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvListaProduto.Dock = DockStyle.Fill;
             dgvListaProduto.Location = new Point(0, 0);
             dgvListaProduto.Name = "dgvListaProduto";
-            dgvListaProduto.Size = new Size(631, 234);
+            dgvListaProduto.Size = new Size(579, 234);
             dgvListaProduto.TabIndex = 0;
             // 
             // FormListaProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 234);
+            ClientSize = new Size(579, 234);
             Controls.Add(dgvListaProduto);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;

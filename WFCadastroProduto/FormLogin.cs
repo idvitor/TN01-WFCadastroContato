@@ -47,16 +47,28 @@ namespace WFCadastroProduto
                         FormMenu form = new FormMenu();
                         form.ShowDialog();
 
+                        //Limpa os dados dos componentes
                         this.txtLogin.Clear();
                         this.txtSenha.Clear();
 
+                        //Esconde o formulário
+                        this.Hide();
+
                         return;
                     }
-                   
+
                 }
             }
             Erro("Usuario e Senha não se encontra na Base!");
             return;
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAcessar_Click(sender, e);
+            }
         }
     }
 }

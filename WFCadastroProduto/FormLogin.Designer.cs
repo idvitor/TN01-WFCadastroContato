@@ -77,6 +77,7 @@
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(100, 23);
             txtSenha.TabIndex = 2;
+            txtSenha.KeyDown += txtSenha_KeyDown;
             // 
             // FormLogin
             // 

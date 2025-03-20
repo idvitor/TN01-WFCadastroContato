@@ -77,6 +77,7 @@ namespace WFCadastroProduto
         {
             txtCodigo.Text = "00" + (Produto.ListaProdutos.Count + 1);
             txtCodigo.Enabled = false;
+            dtpVencimento.Value = DateTime.Today;
         }
     }
 }
